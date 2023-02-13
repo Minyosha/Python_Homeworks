@@ -32,6 +32,30 @@ else:
     print("Год не високосный")
 
 '''
+my_list = [2, 5, 9, 1, 2]
+
+for i in range(len(my_list)):
+    if i % 2 == 0:
+        my_list[i] *= -1
+
+print(my_list)
+
+
+
+
+def check(symbol):
+    global i
+    global j
+    for i in range(len(field)):
+        for j in range(len(field[i])):
+            if ((field[0][0] and field[1][1] and field[2][2]) == symbol) or \
+                    ((field[2][0] and field[1][1] and field[0][2]) == symbol) or \
+                    ((field[i][0] and field[i][1] and field[i][2]) == symbol) or \
+                    ((field[0][j] and field[1][j] and field[2][j]) == symbol):
+                print(symbol, "победил")
+                global is_win
+                is_win = True
+
 
 # Напишите программу для. проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат
 # ручной режим
